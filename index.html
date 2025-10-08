@@ -4,59 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naziha Boussemaha — Linktree</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-      background-color: #faf8f5;
-      color: #333;
-      text-align: center;
+      margin: 0;
+      height: 100vh;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #dbead5, #f4efe6);
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+      animation: fadeIn 2s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadePhoto 2.2s ease-in forwards;
+    }
+
+    @keyframes fadePhoto {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
     h1 {
-      font-size: 1.8em;
-      font-weight: 600;
-      margin-bottom: 0.2em;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2em;
+      margin: 0.3em 0;
+      opacity: 0;
+      animation: slideUp 2s ease-in forwards;
     }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     p {
-      font-size: 1em;
-      color: #555;
       font-style: italic;
+      color: #555;
       margin-bottom: 2em;
+      opacity: 0;
+      animation: fadeText 2.5s ease-in forwards;
     }
+
+    @keyframes fadeText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     a {
       display: block;
+      width: 240px;
       text-decoration: none;
       color: #333;
-      background: #f4f0eb;
-      border: 1px solid #ddd;
-      border-radius: 25px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid #d6d6d6;
+      border-radius: 30px;
       padding: 12px 20px;
       margin: 10px 0;
-      width: 220px;
       transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
     }
+
     a:hover {
-      background-color: #e6ddd3;
-      transform: translateY(-2px);
+      background-color: #e5f0e3;
+      transform: translateY(-3px);
     }
+
     footer {
       font-size: 0.8em;
-      color: #aaa;
+      color: #888;
       margin-top: 3em;
     }
   </style>
 </head>
 <body>
+  <img src="photo.jpg" alt="Photo de profil de Naziha Boussemaha">
   <h1>Naziha Boussemaha</h1>
   <p>« Donner du sens aux données, avec sincérité et clarté »</p>
 
   <a href="https://rhinestone-freighter-f8e.notion.site/Naziha-B-0ffa419546c680299ab0d6204ccac4c3" target="_blank">🧠 Mon espace Notion</a>
   <a href="https://github.com/Nha-Bssha" target="_blank">💻 Mon GitHub</a>
+  <a href="CV_EN-4.pdf" target="_blank" download>📄 Télécharger mon CV</a>
 
   <footer>© 2025 — Créé avec sincérité 🌿</footer>
 </body>
